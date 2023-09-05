@@ -1,0 +1,97 @@
+<!--comentario-->
+<!--
+    o interpretador entende?
+-->
+
+<!--defini o tipo do documento HTML-->
+<!DOCTYPE html> <!-- digitação -->
+<html lang="pt-br"> <!--tag principal atributo lang define o idioma-->
+<!--Estude a tag e seus atributos-->
+
+<!--Focar em tags de formulario 
+caixinhas de texto com boões-->
+<head><!-- Cabeçlho do site: Padrões WEB, Normas, Robô-->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Gabarito 01 - Márcia</title>
+
+</head>
+<!--Corpo-->
+<body>
+    <!--Que começem os jogos!!!-->
+    Digite um número <input type="number" id="num1">
+    Digite outro número <input type="number" id="num2">
+    <!--Onclick é uma ação (de clicar)-->
+    <button onclick="somar()"> somar </button>
+    <button onclick="subtrair()"> subtrair </button>
+    <button onclick="dividir()"> dividir </button>
+    <button onclick="multiplicar()"> multiplicar </button>
+
+    <!--HTML-->
+    <script>
+        function somar() {
+            // num1 é a variável
+            //erro: ao invés de somar esta concatenando
+            //só acontece com a soma?
+            // "+"
+            var num1 = Number.parseInt(document.getElementById("num1").value)
+            // num2 è a Variável 
+            var num2 = Number.parseInt(document.getElementById("num2").value)
+
+            var soma = num1 + num2 //"+" é junção de texto 
+
+            alert(soma)
+        }
+
+        function subtrair() {
+            // num1 é a variável
+            //erro: ao invés de somar esta concatenando
+            //só acontece com a soma?
+            // "+"
+            var num1 = Number.parseInt(document.getElementById("num1").value)
+            // num2 è a Variável 
+            var num2 = Number.parseInt(document.getElementById("num2").value)
+
+            var sub = num1 - num2 //"+" é junção de texto 
+
+            alert(sub)
+        }
+
+        function dividir() 
+        
+        {
+            // num1 é a variável
+            //erro: ao invés de somar esta concatenando
+            //só acontece com a soma?
+            // "+"
+            var num1 = Number.parseInt(document.getElementById("num1").value)
+            // num2 è a Variável 
+            var num2 = Number.parseInt(document.getElementById("num2").value)
+
+            var div = num1 / num2 //"+" é junção de texto 
+
+            alert(div)
+
+        }
+            function multiplicar() 
+            
+        {
+            // num1 é a variável
+            //erro: ao invés de somar esta concatenando
+            //só acontece com a soma?
+            // "+"
+            var num1 = Number.parseInt(document.getElementById("num1").value)
+            // num2 è a Variável 
+            var num2 = Number.parseInt(document.getElementById("num2").value)
+
+            var mult = num1 * num2 //"+" é junção de texto 
+
+            alert(mult)
+        }
+    </script>
+
+
+
+
+</body>
+
+</html>
