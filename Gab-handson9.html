@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Calculadora de Bhaskara</title>
+</head>
+<body>
+    <h1>Calculadora de Bhaskara</h1>
+    
+    <input type="number" id="a" placeholder="Coeficiente a"><br>
+    <input type="number" id="b" placeholder="Coeficiente b"><br>
+    <input type="number" id="c" placeholder="Coeficiente c"><br>
+    
+    <button onclick="calcularBhaskara()">Calcular Raízes</button>
+    
+    <p id="resultado"></p>
+
+    <script>
+        function calcularBhaskara() {
+            var a = parseFloat(document.getElementById("a").value);
+            var b = parseFloat(document.getElementById("b").value);
+            var c = parseFloat(document.getElementById("c").value);
+            
+            var delta = b * b - 4 * a * c;
+            
+            if (delta > 0) {
+                var raiz1 = (-b + Math.sqrt(delta)) / (2 * a);
+                var raiz2 = (-b - Math.sqrt(delta)) / (2 * a);
+                document.getElementById("resultado").textContent = "Raízes reais: x1 = " + raiz1.toFixed(2) + ", x2 = " + raiz2.toFixed(2);
+            } else if (delta === 0) {
+                var raizUnica = -b / (2 * a);
+                document.getElementById("resultado").textContent = "Raiz única: x = " + raizUnica.toFixed(2);
+            } else {
+                document.getElementById("resultado").textContent = "Não existem raízes reais.";
+            }
+        }
+    </script>
+</body>
+</html>
